@@ -4,8 +4,8 @@ import numpy as np
 img = cv2.imread('pic.jpg')
 img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
-lower_orange = np.array([5, 100, 100])
-upper_orange = np.array([15, 255, 255])
+lower_orange = np.array([6, 100, 100])
+upper_orange = np.array([20, 255, 255])
 img_threshold = cv2.inRange(img_hsv, lower_orange, upper_orange)
 
 contours, _ = cv2.findContours(img_threshold, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
